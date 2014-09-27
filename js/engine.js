@@ -124,6 +124,21 @@ var canvas, content, input;
 
       })();
 
+      input = (function() {
+
+        var i = {},
+
+        _bindings = {},
+        _pressed = {},
+        _down = {},
+        _released = {},
+
+        mouse = { x: 0, y :0};
+
+      })();
+
+
+
     })();
 
 
