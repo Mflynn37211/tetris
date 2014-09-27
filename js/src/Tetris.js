@@ -9,11 +9,12 @@ define(["Gameboard", "StatManager"], function(GameBoard, StatManager) {
           this.stat = new StatManager();
       },
 
-      handleInputs: function(inpt) {
-        },
 
-      update: function() {
 
+      update: function(inpt) {
+
+
+        }
       },
 
       draw: function(ctx) {

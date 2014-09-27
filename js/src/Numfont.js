@@ -1,12 +1,12 @@
-define (function(){
+define (function() {
 
     var Numfont = Class.extend({
 
       init: function(img, y, h) {
-        this.img = img;
-        this.y = y;
-        this.height = h;
-        this.width = img.width / 10;
+          this.img = img;
+          this.y = y;
+          this.height = h;
+          this.width = img.width / 10;
       },
 
       draw: function(ctx, num, x, y, padding) {
@@ -15,8 +15,8 @@ define (function(){
 
         if (padding) {
           num = num.length >= padding ? num : new Array(padding - num.length + 1).join("0") + num;
-
         }
+
           var n;
           for (var i = 0, len = num.length; i < len; i++) {
               n = parseInt(num[i]);

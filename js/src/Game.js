@@ -34,6 +34,7 @@ define(function(){
 
           self.tick();
 
+
           canvas.flip();
         }
         this._reqframe = window.requestAnimationFrame(loop);
