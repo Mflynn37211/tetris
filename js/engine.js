@@ -1,4 +1,4 @@
-var canvas, input, content;
+var canvas, content, input;
 (function() {
 
       canvas = (function() {
@@ -73,4 +73,57 @@ var canvas, input, content;
       })();
 
 
+      content = (function() {
+
+        var c = {},
+
+            _files = {},
+            _filecount = 0,
+            _loadcount = 0;
+
+        c.get = function(name) {
+          return _files[name];
+        }
+
+        c.progress = function() {
+          return _loadcount/_filecount;
+        }
+
+        c.load = function(name, src) {
+
+          src = src || name;
+
+          _filecount++;
+
+          switch (src.split(".").pop()) {
+
+            case "png":
+            case "gif":
+            case "jpg":
+                var img = new Image();
+                img.onload = function(){
+                  _loadcount++;
+                }
+                img.src = src;
+                _files[name] = img;
+                break;
+
+            case "ogg":
+            case "mp3":
+            case "wav":
+                break;
+
+            case "json":
+            case "tmx":
+                break;
+          }
+        }
+
+
+        return c;
+
+      })();
+
     })();
+
+

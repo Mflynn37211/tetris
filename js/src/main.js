@@ -9,7 +9,7 @@ requirejs.config({
   }
 });
 
-require(["src/Game"]), function(Game) {
+require(["Game"], function(Game) {
 
     var App = Game.extend({
 
@@ -17,11 +17,16 @@ require(["src/Game"]), function(Game) {
         canvas.width = 200;
         canvas.height = 100;
         canvas.scale = 2;
+
+        content.load("back", "res/back.png")
+        content.load("blocks", "res/blocks.png")
+        content.load("numbers", "res/numbers.png")
       }
     });
 
-    window.onload = function() {
+   (function() {
         var game = new App();
         game.run();
-    }
+
+    })();
 });
