@@ -1,12 +1,15 @@
 
 
-define(["Gameboard", "StatManager"], function(GameBoard, StatManager) {
+define(["Gameboard", "StatManager", "Tetramino"], function(GameBoard, StatManager, Tetramino) {
 
   var Tetris = Class.extend({
 
       init: function() {
           this.gameBoard = new GameBoard();
           this.stat = new StatManager();
+
+          var tet = new Tetramino(Tetramino.Z);
+
       },
 
 
@@ -14,7 +17,6 @@ define(["Gameboard", "StatManager"], function(GameBoard, StatManager) {
       update: function(inpt) {
 
 
-        }
       },
 
       draw: function(ctx) {

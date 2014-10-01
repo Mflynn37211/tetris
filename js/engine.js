@@ -132,7 +132,7 @@ var canvas, content, input;
 
       mouse = { x: 0, y: 0 };
 
-    i.mouse = mouse;
+      i.mouse = mouse;
 
     var Buttons = {
       LEFT: -1,
