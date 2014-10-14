@@ -1,5 +1,5 @@
 
-define(function() {
+define(function(){
 
   var DrawIDs = {
       NONE: 0,
@@ -25,8 +25,11 @@ define(function() {
     });
 
     for (var id in DrawIDs) {
-        Block[id] = DrawIDs[key];
+        Block[id] = DrawIDs[id];
     }
 
+    return Block;
 
 });
+
+

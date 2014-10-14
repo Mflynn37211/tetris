@@ -14,7 +14,7 @@ define(["Numfont"], function(Numfont) {
             blue  : new Numfont(num, 27, 9),
             orange: new Numfont(num, 36, 9),
             green : new Numfont(num, 45, 9),
-            yellow: new Numfont(num, 54, 9),
+            yellow: new Numfont(num, 54, 9),ss
             purple: new Numfont(num, 63, 9)
           };
       },
@@ -35,6 +35,19 @@ define(["Numfont"], function(Numfont) {
         this.font.gray.draw(ctx, tet.tot, 425, 220, 6);
 
     }
+
+     drawBlock: function (ctx, block, x, y) {
+          var id = block.id,
+              size = 12;
+
+              x = 100 + x*size;
+              y = 100 + y*size;
+
+          ctx.drawImage(this.blocks)
+
+
+     }
+
   });
 
   return Gameboard;

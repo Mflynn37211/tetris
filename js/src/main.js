@@ -45,7 +45,7 @@ require(["Game", "Tetris"], function(Game, Tetris) {
               this.hasLoad = content.progress() === 1;
 
               if (this.hasLoad) {
-                  this.tetris = new Tetris();
+                  this.tetris = new Tetris(10, 22);
               }
           }
         }
